@@ -1,3 +1,4 @@
-Link to GitHub : github.com/Raisilin/zakrivayuschiy-teg-ad
-Site :  https://raisilin.github.io/zakrivayuschiy-teg-ad/
+*Link to GitHub*: github.com/Raisilin/zakrivayuschiy-teg-ad
+=
+*Site* :  https://raisilin.github.io/zakrivayuschiy-teg-ad/
 
