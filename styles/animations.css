@@ -9,3 +9,120 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+.button-animation {
+  position: relative;
+  color: white;
+  fill: white;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.button-animation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.button-animation:hover::before {
+  transform: translateX(0);
+}
+
+.button-animation:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 0 black;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  border: var(--border-settings);
+}
+
+.sparks {
+  fill: var(--animation-fill-color);
+  opacity: 0;
+}
+
+.main_body {
+  fill: transparent;
+  transition: fill var(--duration-of-animation) ease ;
+}
+
+.core {
+  fill: transparent;
+  transition: fill var(--duration-of-animation) ease 0.03s;
+}
+
+
+.contur {
+  fill: var(--contour-color);
+  transition: fill var(--duration-of-animation) ease 0.06s;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--contour-color);
+  transition-delay: 0;
+}
+
+.card__icon-button:hover .main_body {
+  fill: var(--contour-color);
+  transition-delay:0.05s;
+}
+
+.card__icon-button:active .core {
+  fill: var(--animation-fill-color);
+}
+
+.card__icon-button:active .main_body {
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .main_body {
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .contur {
+  fill: var(--animation-fill-color);
+}
+
+.card__icon-button .is-liked {
+  animation: scaling 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparkling 0.3s ease-in 0.3s;
+}
+
+@keyframes scaling {
+  from {
+    scale: 1;
+  }
+  50% {
+    scale: 1.25;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes sparkling {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
