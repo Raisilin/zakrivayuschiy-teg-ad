@@ -229,7 +229,7 @@ dialog::backdrop {
   color: white;
 }
 
-@media (width <= 376px) {
+@media (width <= 375px) {
   logo-content {
     margin-bottom: 102px;
   }
