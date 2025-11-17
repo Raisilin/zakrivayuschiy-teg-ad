@@ -230,10 +230,9 @@ dialog::backdrop {
 }
 
 @media (width <= 375px) {
-  logo-content {
+  .logo-content {
     margin-bottom: 102px;
   }
-
   .bottom-button {
     flex-direction: column;
   }
